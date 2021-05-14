@@ -1,0 +1,19 @@
+pluginManagement {
+	repositories {
+		mavenCentral()
+		maven {
+			url "https://plugins.gradle.org/m2/"
+		}
+		// For the stepleap Gradle plugin
+		maven {
+			credentials {
+				username "<username>"
+				password "<password>"
+			}
+			url 'https://pbrandwijk.com/maven'
+		}
+	}
+}
+
+rootProject.name = 'stepleap-demo'
+
