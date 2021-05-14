@@ -15,5 +15,5 @@ pluginManagement {
 	}
 }
 
-rootProject.name = 'stepleap-demo'
+rootProject.name = 'stepleap-starter-kit'
 

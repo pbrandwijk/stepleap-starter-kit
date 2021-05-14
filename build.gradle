@@ -1,0 +1,14 @@
+/*
+ * Copyright (c) 2020-2021 Pieter Brandwijk.
+ */
+
+plugins {
+	id 'com.pbrandwijk.stepleap' version '0.1.5'
+}
+
+group 'com.pbrandwijk.stepleap'
+
+importStepxml {
+	stepxmlPath = "src/main/resources/stepxml/exported.xml"
+	outputPath = "src/main/js"
+}
