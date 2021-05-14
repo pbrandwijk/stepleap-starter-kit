@@ -24,7 +24,7 @@ Then open up a terminal, go to the project folder and execute:
 $ gradlew tasks -all
 ```
 
-This will download the plugin and libraries and display all available tasks. To run the importStepxml task on the example STEPXML file in the projec, run:
+This will download the plugin and libraries and display all available tasks. To run the importStepxml task on the example STEPXML file in the project, run:
 
 ```console
 $ gradlew importStepxml -w
