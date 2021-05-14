@@ -30,4 +30,4 @@ This will download the plugin and libraries and display all available tasks. To 
 $ ./gradlew importStepxml -w
 ```
 
-This will import all business rules from the STEPXML file and put them under `src/main/js`. The `-w` directive is optional and can be replaced with `-i` for displaying log messages from warning level and above and info level and abve respectively.
+This will import all business rules from the STEPXML file and put them under `src/main/js`. The `-w` directive is optional and can be replaced with `-i` for displaying log messages from warning level and above and info level and above respectively.
