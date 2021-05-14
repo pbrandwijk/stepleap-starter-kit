@@ -7,13 +7,15 @@ To get a running start with Stepleap, either fork this project, or download the 
 To run Stepleap you do need to add the credentials for the Gradle plugin repository. Do this by editting the username and password lines in `settings.gradle`.
 
 ```groovy
-		maven {
-			credentials {
-				username "<username>"
-				password "<password>"
-			}
-			url 'https://pbrandwijk.com/maven'
-		}
+...
+maven {
+	credentials {
+		username "<username>"
+		password "<password>"
+	}
+	url 'https://pbrandwijk.com/maven'
+}
+...
 ```
 
 Then open up a terminal, go to the project folder and execute:
