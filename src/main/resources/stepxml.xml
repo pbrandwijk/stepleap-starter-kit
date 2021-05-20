@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020-2021 Pieter Brandwijk.
+  -->
+
+<!-- Configuration:
+<STEP-ProductInformation ResolveInlineRefs="true">
+<BusinessLibraries ExportSize="All"/>
+<BusinessRules ExportSize="All"/>
+</STEP-ProductInformation>
+
+Export from Primary Product Hierarchy
+Classifications All
+Products All
+Assets All
+
+Exported by database exporter.
+-->
+<STEP-ProductInformation ExportTime="2020-07-27 10:41:22" ExportContext="Dutch NL" ContextID="Dutch NL" WorkspaceID="Main" UseContextLocale="false">
+
+  <SetupGroups>
+    <SetupGroup ID="GlobalBusinessRulesRoot" UserTypeID="GlobalBusinessRules">
+      <Name>Global Business Rules</Name>
+      <SetupGroup ID="Actions" UserTypeID="BusinessRuleGroup">
+        <Name>Actions</Name>
+        <SetupGroup ID="ProductActions" UserTypeID="BusinessRuleGroup">
+          <Name>Product Actions</Name>
+        </SetupGroup>
+      </SetupGroup>
+      <SetupGroup ID="Conditions" UserTypeID="BusinessRuleGroup">
+        <Name>Conditions</Name>
+      </SetupGroup>
+      <SetupGroup ID="Libraries" UserTypeID="BusinessRuleGroup">
+        <Name>Libraries</Name>
+      </SetupGroup>
+    </SetupGroup>
+  </SetupGroups>
+
+  <BusinessLibraries>
+    <BusinessRule ID="ExtractorTestLibrary" Type="Library">
+      <SetupGroupLink SetupGroupID="Libraries"/>
+      <Name>Extractor Test Library</Name>
+      <Description>Basic library with single function</Description>
+      <Configuration>H4sIAAAAAAAAAFWQT2sCMRTEz82neORQ9OBueyuYrCBSUHqQas9Lus2GJzFJ80cqpd+9abOKe/3NY2beOJ0UmlY4p1GGFvu2s6ZHxUIGsXFFLoyzxddRw0n6gNZw+lg9UJCmsx9oFKdv++fZE100hC1TQCNDeE1aNgTgCrb/dnCrF7RecboRJ7HrPLp40V/w3Qt/pn8e2WUrvDjKmOMLuEUwdqCwPzvJ6SGTSgujql30uSVt+mS6mOtDlCFOpvBN7rRVSvoKTW8n95/JxvkQDJfjQqdz8kNYfc0catXjXqwef5v3qMeDDNv+Arptgp17AQAA</Configuration>
+      <ValidObjectTypes AllObjectTypesValid="false"/>
+    </BusinessRule>
+  </BusinessLibraries>
+
+  <BusinessRules>
+    <BusinessRule ID="ExtractorTestBAFull" Scope="Global" Type="Action" RunPrivileged="false">
+      <SetupGroupLink SetupGroupID="ProductActions"/>
+      <Name>Extractor Test BA Full</Name>
+      <Description>BA with multiple operations, dependencies and applied ifs</Description>
+      <Dependency LibraryID="ExtractorTestLibrary" LibraryAlias="exlib"/>
+      <OnApprove ApproveSetup="Never"/>
+      <Configuration>H4sIAAAAAAAAAO2W32/TMBDH3/tXWHmo4IGG8YTUplVbqMSPsoqG9XFyk2vmzbGDfSnb/nqcOEtbQkigHRITb/HZ+dz57vy1E55GTFzSJOEM9CXbXAZSbFjkDUa3MSdbUJpJ4TlnvZcOARHIkInIc774sxevndGwM5ikmgnQ+nPKYdghpDQscjLZn7emd288Z4yo2DpFmMo4oYqiVFMpQobGmZNhDGhh7DGgicAa9k3kAHLmEP8uAc+5plva41REvaWZEpEzXKQqkRoGbvlrE+xVPayZYjahkQqsZyxlDCRpG9V5Anly6nleBbJnyDM3cA9L0r5K7423ZaBYgg/zZZFWDK8mTIS6dbXs6tp9dDn2D1qu+zWV2Dd9Zz92zWfHeQfaz1E3wn4nA2Q+5jTJx4Q8WIhpaVQ0QBOG/WOaKgUCz9fXEGC2ZFqsKHyNOaO6WCtkCIW53NCUU13Op5zbL7eMw90PpLnKb5WSam7SSyP4RYqaQbuC1VMUYKoEQZVC/w96Z2exJ36gjXLgMLE68lfEo9qW4+Df78k5Fab8qqEb40j9TjM+vUNwkpp8lAHl7J6uORQefYgTThEmqQg57OWufikpxoWjFfDAaHsRxQe4K+yRAkATjx0VZMv2FRXaoMw2qrAbGVdY4ofiNmEmDMQWBAtlBQW62idu/WZ3VW2Vu9NIFZeRORE9JjbymY12xpRGIvNb0WzXGp//xN/pLsElYPk2uKA8hUPRaa01MyXjEnSMyGeglVQ3Gy6/nYpzQRXLKvrJzB/D9OEW8yQdBZEt8lT3sHvM189TuGb+q36tcrmPKl3+FVPhaaSr5g32Hevi4m3MDQAA</Configuration>
+      <ValidObjectTypes AllObjectTypesValid="false">
+        <ValidObjectType ID="Product"/>
+      </ValidObjectTypes>
+    </BusinessRule>
+    <BusinessRule ID="ExtractorTestBAEmpty" Scope="Global" Type="Action" RunPrivileged="false">
+      <SetupGroupLink SetupGroupID="ProductActions"/>
+      <Name>Extractor Test BA Empty</Name>
+      <Description>BA with no operations, dependencies or applied ifs</Description>
+      <OnApprove ApproveSetup="Never"/>
+      <Configuration>H4sIAAAAAAAAACvIKU3PzItPLCjIyUwtjs9Mi0/Oz0vLTLe1sa/IzVEoSy0qzszPs1Uy1DNQUkjNS85PycxLt1UKDXHTtVCyt+OycSotzsxLLS4OKs1J1Qfyi4EGldgVQIylilkAXZPq16MAAAA=</Configuration>
+      <ValidObjectTypes AllObjectTypesValid="false">
+        <ValidObjectType ID="Product"/>
+      </ValidObjectTypes>
+    </BusinessRule>
+    <BusinessRule ID="ExtractorTestBCFull" Scope="Global" Type="Condition" RunPrivileged="false">
+      <SetupGroupLink SetupGroupID="Conditions"/>
+      <Name>Extractor Test BC Full</Name>
+      <Description>Business condition with operations, dependencies and applies ifs</Description>
+      <Dependency LibraryID="ExtractorTestLibrary" LibraryAlias="exlib"/>
+      <OnApprove ApproveSetup="Never"/>
+      <Configuration>H4sIAAAAAAAAAO1Ty07DMBC89yusHHqjgRtSk1Q0gHhVVBDEsXKTberKtYMfFeXrcWI3TVADHDggwc073szOjDcF1TlhM1wUlICckcUs5WxB8jAYva4p2oCQhLPQOxkcewhYyjPC8tB7Si6PTr1R1AvGWhIGUj5oClEPoRqYVsyoeW+h6/PQu8Eb/JgKUqjdfcxZRpSZ9UzUckxYJr2SzhBOscBrUEaJBZoQKslsN0q2BYTeyjAPKGb54FEJo9WL+lQNW2b6L5qroXFkD3tbtq682eOon6thryQoZ0xwUdUI7RBkwlICp8rIsF/EWghg6n6+glSVLbHrcLPOKMHS9TKegYNrQzHFsr7XlNqTX+vwm0ICv/6uI5oLIbiYmHhxDp9E9DXR/sG6WQQoLRhSQsMBbQ2gesjAb2+K2SW/vUyBNEuposKu6P9e/r29/JGI7niKKXnDcwpuYgLrgmIFY80yCo3suluRq92gK6CUOw23sHXoskQnMreV47XMicBMGiJj4iMVPkTFWglbDr9b3v4dvuX2V//v71BgWdaTBgAA</Configuration>
+      <ValidObjectTypes AllObjectTypesValid="false">
+        <ValidObjectType ID="Product"/>
+      </ValidObjectTypes>
+    </BusinessRule>
+  </BusinessRules>
+</STEP-ProductInformation>

@@ -1,0 +1,11 @@
+plugins {
+	id 'com.pbrandwijk.stepleap' version '0.1.5'
+}
+
+group 'com.pbrandwijk.stepleap'
+
+importStepxml {
+	stepxmlPath = "src/main/resources/stepxml.xml"
+	outputPath = "src/main/js"
+}
+
