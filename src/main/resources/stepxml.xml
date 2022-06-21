@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (c) 2020-2021 Pieter Brandwijk.
+  ~ Copyright (c) 2022 Pieter Brandwijk.
   -->
 
 <!-- Configuration:
@@ -32,6 +32,9 @@ Exported by database exporter.
       </SetupGroup>
       <SetupGroup ID="Libraries" UserTypeID="BusinessRuleGroup">
         <Name>Libraries</Name>
+      </SetupGroup>
+      <SetupGroup ID="Functions" UserTypeID="BusinessRuleGroup">
+        <Name>Functions</Name>
       </SetupGroup>
     </SetupGroup>
   </SetupGroups>
@@ -78,6 +81,14 @@ Exported by database exporter.
       <ValidObjectTypes AllObjectTypesValid="false">
         <ValidObjectType ID="Product"/>
       </ValidObjectTypes>
+    </BusinessRule>
+    <BusinessRule ID="ExtractorTestBFFull" Scope="Global" Type="Function" RunPrivileged="false">
+      <SetupGroupLink SetupGroupID="Functions"/>
+      <Name>Extractor Test BF Full</Name>
+      <Description>BF with an operation that returns the input string concatenated to itself</Description>
+      <OnApprove ApproveSetup="Never"/>
+      <Configuration>H4sIAAAAAAAAAL1Vy07DMBC89yssHyo40MANKY8KWiqBVIQoCHGqrNQNRq4T7HWBv8ex8y4llAM3e8a7Ozt+ZVwnTCxJlnFG1ZKtl3Eq1iwJlAEgyhztsDAYf2w42lKpWCpCfDY6xYiKOF0xkYT48WF2co7HUXCpFRNUqXvNaTRAqALubDbU5B10PQ3xDdmSRSxZBiU/0yIGU+mJwcslEyuFo+Cegpbi4TOj0asJGHEiktECpFEQeA3SlDWF74gkGwpGsAOaEMqLurQoDwlxNyGOhhz8Vs/DN52Cbxp3g7p7N7cWuOF4mIA/yBPkNeYks3OESgQZT0GSGIwMFzEngiRU5uSk4IoqF5wRVazaJLJAq04mnKiSFppzN/IqAV5TQeBVcXs8uZIylXPjv1Gz3xtvT3S5aRX6HxZ/W/Q3njsVPZYzkekSn1Jlz2itdJFuKAL6AQdvy4+q+/epDK9P/T+5XBds+NsGuwpsv524lgcdrr/7+rnY3/WWSATvLKYoRHYTR+YAxASO7OTYH0hb1a3xd2o2APt+BO6xqsGJfRa1JHkHUZdusYitdm4WEwxCPH2+vZhfT8yF6k9Q3KXDA5tuHR793Un7e5buy7CTyevx2Wv/J9GgRuyXU/xdXxnL7yXbBgAA</Configuration>
+      <ValidObjectTypes AllObjectTypesValid="true"/>
     </BusinessRule>
   </BusinessRules>
 </STEP-ProductInformation>
