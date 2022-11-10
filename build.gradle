@@ -1,11 +1,20 @@
 plugins {
-	id 'com.pbrandwijk.stepleap' version '0.1.5'
+	id 'com.pbrandwijk.stepleap' version '0.1.8'
 }
 
 group 'com.pbrandwijk.stepleap'
 
-importStepxml {
+transform {
 	stepxmlPath = "src/main/resources/stepxml.xml"
-	outputPath = "src/main/js"
+	plainjsPath = "src/main/js"
 }
 
+export {
+	stepxmlPath = "src/main/resources/stepxml.xml"
+	plainjsPath = "src/main/js"
+}
+
+brdeps {
+	stepxmlPath = "src/main/resources/stepxml.xml"
+	outputPath = "src/main/js/br-deps.json"
+}
