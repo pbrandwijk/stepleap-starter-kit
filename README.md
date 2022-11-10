@@ -24,10 +24,10 @@ Then open up a terminal, go to the project folder and execute (use `.\gradlew.ba
 $ ./gradlew tasks --all
 ```
 
-This will download the plugin and libraries and display all available tasks. To run the importStepxml task on the example STEPXML file in the project, run:
+This will download the plugin and libraries and display all available tasks. To run the transform task on the example `stepxml.xml` file in the project, run:
 
 ```console
-$ ./gradlew importStepxml -w
+$ ./gradlew transform -w
 ```
 
-This will import all business rules from the STEPXML file and put them under `src/main/js`. The `-w` directive is optional and can be replaced with `-i` for displaying log messages from warning level and above and info level and above respectively.
+This will import all business rules from the `stepxml.xml` file and put them under `src/main/js`. The `-w` directive is optional and can be replaced with `-i` for displaying log messages from warning level and above and info level and above respectively.
