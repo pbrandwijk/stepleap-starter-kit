@@ -37,6 +37,9 @@ Exported by database exporter.
         <Name>Functions</Name>
       </SetupGroup>
     </SetupGroup>
+    <SetupGroup ID="Workflows" UserTypeID="Workflows">
+      <Name>Workflows</Name>
+    </SetupGroup>
   </SetupGroups>
 
   <BusinessLibraries>
@@ -91,4 +94,17 @@ Exported by database exporter.
       <ValidObjectTypes AllObjectTypesValid="true"/>
     </BusinessRule>
   </BusinessRules>
+
+  <STEPWorkflows>
+    <STEPWorkflow ID="ExtractorTestWF">
+      <SetupGroupLink SetupGroupID="Workflows"/>
+      <Name>Extractor Test WF</Name>
+      <Configuration>H4sIAAAAAAAAAI1Ty27bMBC85ytYoldaj8S2VIgGiiIFAhRIgbTNmZZWNlGKEsiVH/36rijVaY049UWrJXdnZoek6rF9sBq1Qni0nxxQlLUyHgrfGY0rOEDZIzyVTnf4RTcaofrq9E4b2ICX6Po/lUZ7BPtoH5qudQjue1edg/ny0BhZhMB0oDWSP6FyyJlVDUh+f0CnSmzdN/D4/JmzHTivWyt5PMs5o0brJd8idh+iaL/fz/a3s9ZtojSO51G8jAI2XxXvhGCM2bYC4fUvEMpWoms9UbaWHWQ8i9kxfPdycZdR3Mr5MqfIhFjdsIK0q4a6DSWsUIiq3DZgkelK8o+nNOWs6Q3qnTI90M7gB7FHLw2rmwFggGO06PSa3CQEh/onGBode88D6A/lkqF1KB2bLrImZ6zB43PaEWmagSZS3uuNBQhY78veOSrjDI8d6ek9uAAwFYUOT+qAVdqXrUVt/6IKGP+c25j81/dkOTqfJKP3SRwH79P5yXpW0A2wUwehbgBp9nJIB4Uvm8OIQWIQW2urzGWx97Y6XTH6vVpourwgtIgC4zVGTeIn+tMo11qVv2FVa+kQ3ZGte68teK8C+ECqSivWZVXPs6wWUGcLcbeo5iLPb1ORqzKD9RKyOkkHTyeU8da94v7o2OvWF+OTW01P/DeRcLG4UQQAAA==</Configuration>
+      <LocalBusinessRule ID="acn-bcdf588f-ef86-46d5-9932-9ac8eb7e8f12" Scope="Local" Type="Action" RunPrivileged="false">
+        <Configuration>H4sIAAAAAAAAAIVSTU/DMAy991dEOexGAzek9UPbAAHSxMSGOFah9bpMWRoSd4J/T9p0XSs0uNnPzrPfi7WsS6EyrrUUYDOxzfJKbUUZWQdgon3ZY3GUfh0kOYKxolIxvQmvKQGVV4VQZUzfNg9XtzRNgmheW6HA2tdaQhIQ0gOrlo4M6x56uovpMz/ydW6ExlN9lqMb9C5wNxeqsLThcmwrbvgB0K3hgSFEGibfTTbfGmK6d7Sh5KoM12jcojSZSJyOlEw+6wqnTo4Pzpp83grzYTopcRo0BM2MJddtTsgJIc4pNDxHt4Z/saiNAYUvH3vIsWlZdB3drJkU3Ha9qiqgg3tBC8ltX6+l9BHr92DDRSLWv7tgzb0xlVk6b3kJf1j0P9H5ty6zMEYewYAz5QCW4K6JCvjFPQDaH43Y+F7cRbHxSXXX+QNcFK9JvQIAAA==</Configuration>
+        <ValidObjectTypes AllObjectTypesValid="true"/>
+      </LocalBusinessRule>
+    </STEPWorkflow>
+  </STEPWorkflows>
+
 </STEP-ProductInformation>
